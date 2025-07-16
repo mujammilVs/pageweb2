@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
       title: "Address",
       details: "",
       subtitle:
-        "Plot No. 815, B.V.L. Complex, 4th Floor, 100Ft, Road, Sri Swamy Ayyappa Co-operative Society, Madhapur, Hyderabad- 50081.",
+        "Plot No. 815, B.V.L. Complex, 4th Floor, 100Ft, Road, Sri Swamy Ayyappa Co-operative Society, Madhapur, Hyderabad- 500081.",
     },
     {
       icon: Clock,
