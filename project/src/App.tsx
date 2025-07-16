@@ -15,10 +15,12 @@ import TransformationConsulting from './pages/services/TransformationConsulting'
 import CorePlatformModernization from './pages/services/CorePlatformModernization';
 import DigitalBankingServices from './pages/services/DigitalBankingServices';
 import BankingCloudServices from './pages/services/BankingCloudServices';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+        <ScrollToTop />
       <div className="min-h-screen bg-gray-50">
         <Layout>
           <Routes>

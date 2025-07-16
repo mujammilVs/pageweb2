@@ -1,14 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Hero from '../components/Home/Hero';
-import QuickLinks from '../components/Home/QuickLinks';
-import ServicesSection from '../components/Home/ServicesSection';
-import PartnersSection from '../components/Home/PartnersSection';
-import AccomplishmentsSection from '../components/Home/AccomplishmentsSection';
-import TeamSection from '../components/Home/TeamSection';
-import RequestConsultant from '../components/Home/RequestConsultant';
-import LocationSection from '../components/Home/LocationSection';
-import RelatedPages from '../components/Home/RelatedPages';
+import React from "react";
+import { motion } from "framer-motion";
+import Hero from "../components/Home/Hero";
+import QuickLinks from "../components/Home/QuickLinks";
+import ServicesSection from "../components/Home/ServicesSection";
+import PartnersSection from "../components/Home/PartnersSection";
+import AccomplishmentsSection from "../components/Home/AccomplishmentsSection";
+import TeamSection from "../components/Home/TeamSection";
+import RequestConsultant from "../components/Home/RequestConsultant";
+import LocationSection from "../components/Home/LocationSection";
+import RelatedPages from "../components/Home/RelatedPages";
+import TeamMembers from "../components/pageteam/TeamSection";
 
 const Home: React.FC = () => {
   return (
@@ -23,6 +24,8 @@ const Home: React.FC = () => {
       <PartnersSection />
       <AccomplishmentsSection />
       <TeamSection />
+      {/* <TeamMembers /> */}
+
       <RequestConsultant />
       <LocationSection />
       <RelatedPages />

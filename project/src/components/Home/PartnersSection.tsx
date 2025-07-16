@@ -1,38 +1,56 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
+import client1 from "../../asstes/cliet1.jpg";
+import client2 from "../../asstes/cliet2.jpg";
+import client3 from "../../asstes/cliet3.jpg";
+import client4 from "../../asstes/cliet4.jpg";
+import client5 from "../../asstes/cliet5.jpg";
+import client6 from "../../asstes/cliet7.jpg";
+import client7 from "../../asstes/client8.jpg";
+import client8 from "../../asstes/client9.jpg";
 
 const PartnersSection: React.FC = () => {
   const partners = [
     {
-      name: 'Microsoft',
-      logo: 'https://images.pexels.com/photos/4050334/pexels-photo-4050334.jpeg?auto=compress&cs=tinysrgb&w=200&h=100',
-      description: 'Strategic technology partner'
+      name: "Microsoft",
+      logo: client1,
+      description: "Strategic technology partner",
     },
     {
-      name: 'Amazon AWS',
-      logo: 'https://images.pexels.com/photos/4050290/pexels-photo-4050290.jpeg?auto=compress&cs=tinysrgb&w=200&h=100',
-      description: 'Cloud infrastructure partner'
+      name: "Amazon AWS",
+      logo: client2,
+      description: "Cloud infrastructure partner",
     },
     {
-      name: 'Google Cloud',
-      logo: 'https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=200&h=100',
-      description: 'AI and machine learning partner'
+      name: "Google Cloud",
+      logo: client3,
+      description: "AI and machine learning partner",
     },
     {
-      name: 'Oracle',
-      logo: 'https://images.pexels.com/photos/4050291/pexels-photo-4050291.jpeg?auto=compress&cs=tinysrgb&w=200&h=100',
-      description: 'Database solutions partner'
+      name: "Oracle",
+      logo: client4,
+      description: "Database solutions partner",
     },
     {
-      name: 'Salesforce',
-      logo: 'https://images.pexels.com/photos/4050336/pexels-photo-4050336.jpeg?auto=compress&cs=tinysrgb&w=200&h=100',
-      description: 'CRM solutions partner'
+      name: "Salesforce",
+      logo: client5,
+      description: "CRM solutions partner",
     },
     {
-      name: 'Adobe',
-      logo: 'https://images.pexels.com/photos/4050292/pexels-photo-4050292.jpeg?auto=compress&cs=tinysrgb&w=200&h=100',
-      description: 'Creative solutions partner'
-    }
+      name: "Adobe",
+      logo: client6,
+      description: "Creative solutions partner",
+    },
+    {
+      name: "Salesforce",
+      logo: client7,
+      description: "CRM solutions partner",
+    },
+    {
+      name: "Adobe",
+      logo: client8,
+      description: "Creative solutions partner",
+    },
   ];
 
   return (
@@ -57,19 +75,19 @@ const PartnersSection: React.FC = () => {
               className="group"
             >
               <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-6 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                <div className=" mx-auto  bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
                   <img
                     src={partner.logo}
                     alt={partner.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform"
                   />
                 </div>
-                <h3 className="text-sm font-semibold text-gray-900 mb-1">
+                {/* <h3 className="text-sm font-semibold text-gray-900 mb-1">
                   {partner.name}
-                </h3>
-                <p className="text-xs text-gray-600">
+                </h3> */}
+                {/* <p className="text-xs text-gray-600">
                   {partner.description}
-                </p>
+                </p> */}
               </div>
             </motion.div>
           ))}
@@ -81,19 +99,27 @@ const PartnersSection: React.FC = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-500">
             <div className="flex items-center">
-              <span className="font-semibold text-blue-600 text-2xl mr-2">500+</span>
+              <span className="font-semibold text-blue-600 text-2xl mr-2">
+                500+
+              </span>
               <span>Active Clients</span>
             </div>
             <div className="flex items-center">
-              <span className="font-semibold text-blue-600 text-2xl mr-2">50+</span>
+              <span className="font-semibold text-blue-600 text-2xl mr-2">
+                50+
+              </span>
               <span>Countries</span>
             </div>
             <div className="flex items-center">
-              <span className="font-semibold text-blue-600 text-2xl mr-2">99%</span>
+              <span className="font-semibold text-blue-600 text-2xl mr-2">
+                99%
+              </span>
               <span>Uptime</span>
             </div>
             <div className="flex items-center">
-              <span className="font-semibold text-blue-600 text-2xl mr-2">24/7</span>
+              <span className="font-semibold text-blue-600 text-2xl mr-2">
+                24/7
+              </span>
               <span>Support</span>
             </div>
           </div>

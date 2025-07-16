@@ -1,35 +1,50 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
+import logo from "../../asstes/logo-page-solutions.webp";
 
 const Footer: React.FC = () => {
   const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Products', path: '/products' },
-    { name: 'Services', path: '/services' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Contact', path: '/contact' },
-    { name: 'Request Consultant', path: '/request-consultant' },
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    { name: "Services", path: "/services" },
+    { name: "About Us", path: "/about" },
+    { name: "Contact", path: "/contact" },
+    { name: "Request Consultant", path: "/request-consultant" },
   ];
 
   const products = [
-    { name: 'Digifabric.ai', path: '/products/digifabric' },
-    { name: 'Digidox', path: '/products/digidox' },
-    { name: 'Figiflo', path: '/products/figiflo' },
+    { name: "Digifabric.ai", path: "/products/digifabric" },
+    { name: "Digidox", path: "/products/digidox" },
+    { name: "Figiflo", path: "/products/figiflo" },
   ];
 
   const services = [
-    { name: 'Transformation Consulting', path: '/services/transformation-consulting' },
-    { name: 'Core Platform Modernization', path: '/services/core-platform-modernization' },
-    { name: 'Digital Banking Services', path: '/services/digital-banking' },
-    { name: 'Banking Cloud Services', path: '/services/banking-cloud' },
+    {
+      name: "Transformation Consulting",
+      path: "/services/transformation-consulting",
+    },
+    {
+      name: "Core Platform Modernization",
+      path: "/services/core-platform-modernization",
+    },
+    { name: "Digital Banking Services", path: "/services/digital-banking" },
+    { name: "Banking Cloud Services", path: "/services/banking-cloud" },
   ];
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: '#' },
-    { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
-    { name: 'Instagram', icon: Instagram, href: '#' },
+    { name: "Facebook", icon: Facebook, href: "#" },
+    { name: "Twitter", icon: Twitter, href: "#" },
+    { name: "LinkedIn", icon: Linkedin, href: "#" },
+    { name: "Instagram", icon: Instagram, href: "#" },
   ];
 
   return (
@@ -39,14 +54,15 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img 
-                src="/Screenshot 2025-07-10 at 8.33.34 AM.png" 
-                alt="PAGE Solutions" 
-                className="h-8 w-auto brightness-0 invert"
+              <img
+                src={logo}
+                alt="PAGE Solutions"
+                className="h-8 w-auto"
               />
             </div>
             <p className="text-gray-400 text-sm">
-              Leading the digital transformation with innovative solutions for modern businesses.
+              Leading the digital transformation with innovative solutions for
+              modern businesses.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
@@ -59,7 +75,9 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-blue-400" />
-                <span className="text-sm">123 Tech Street, Silicon Valley, CA 94105</span>
+                <span className="text-sm">
+                  123 Tech Street, Silicon Valley, CA 94105
+                </span>
               </div>
             </div>
           </div>
@@ -149,13 +167,22 @@ const Footer: React.FC = () => {
             © 2024 TechCorp. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
-            <Link to="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+            <Link
+              to="#"
+              className="text-gray-400 hover:text-white transition-colors text-sm"
+            >
               Terms of Service
             </Link>
-            <Link to="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+            <Link
+              to="#"
+              className="text-gray-400 hover:text-white transition-colors text-sm"
+            >
               Privacy Policy
             </Link>
-            <Link to="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+            <Link
+              to="#"
+              className="text-gray-400 hover:text-white transition-colors text-sm"
+            >
               Cookie Policy
             </Link>
           </div>

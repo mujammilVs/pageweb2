@@ -1,6 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Linkedin, Twitter, Mail } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Linkedin, Twitter, Mail } from "lucide-react";
+
+import team1 from "../../asstes/page-images/sridhar-ceo.webp";
+import team2 from "../../asstes/page-images/krishna-member.webp";
 
 const TeamSection: React.FC = () => {
   const containerVariants = {
@@ -9,9 +12,9 @@ const TeamSection: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.15,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
 
   const memberVariants = {
@@ -23,78 +26,34 @@ const TeamSection: React.FC = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 15
-      }
-    }
+        damping: 15,
+      },
+    },
   };
 
   const team = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO & Founder',
-      image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-      bio: 'Visionary leader with 15+ years in digital transformation',
+      name: "Sridhar Dasari",
+      role: "CEO & Founder",
+      bio: "Visionary leader with 15+ years in digital transformation",
+      image: team1,
       social: {
-        linkedin: '#',
-        twitter: '#',
-        email: 'sarah@techcorp.com'
-      }
+        linkedin: "#",
+        twitter: "#",
+        email: "sarah@techcorp.com",
+      },
     },
     {
-      name: 'Michael Chen',
-      role: 'CTO',
-      image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-      bio: 'Tech innovator specializing in AI and cloud architecture',
+      name: "Krishna Dasari",
+      role: "CTO",
+      image: team2,
+      bio: "Tech innovator specializing in AI and cloud architecture",
       social: {
-        linkedin: '#',
-        twitter: '#',
-        email: 'michael@techcorp.com'
-      }
+        linkedin: "#",
+        twitter: "#",
+        email: "michael@techcorp.com",
+      },
     },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Head of Operations',
-      image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-      bio: 'Operations expert ensuring seamless project delivery',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        email: 'emily@techcorp.com'
-      }
-    },
-    {
-      name: 'David Kim',
-      role: 'Lead Developer',
-      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-      bio: 'Full-stack developer with expertise in modern frameworks',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        email: 'david@techcorp.com'
-      }
-    },
-    {
-      name: 'Lisa Thompson',
-      role: 'Head of Design',
-      image: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-      bio: 'UX/UI designer creating intuitive user experiences',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        email: 'lisa@techcorp.com'
-      }
-    },
-    {
-      name: 'James Wilson',
-      role: 'Head of Sales',
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-      bio: 'Sales strategist building lasting client relationships',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        email: 'james@techcorp.com'
-      }
-    }
   ];
 
   return (
@@ -109,8 +68,8 @@ const TeamSection: React.FC = () => {
           </p>
         </div>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        <motion.div
+          className="flex flex-col md:flex-row gap-6 justify-center items-center"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -118,12 +77,12 @@ const TeamSection: React.FC = () => {
         >
           {team.map((member, index) => (
             <motion.div
-              key={member.name}
+              key={index}
               variants={memberVariants}
-              whileHover={{ 
+              whileHover={{
                 y: -10,
                 scale: 1.02,
-                transition: { type: "spring", stiffness: 300, damping: 20 }
+                transition: { type: "spring", stiffness: 300, damping: 20 },
               }}
               className="group"
             >
@@ -132,11 +91,11 @@ const TeamSection: React.FC = () => {
                   <motion.img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-300"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3 }}
                   />
-                  <motion.div 
+                  <motion.div
                     className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
@@ -170,7 +129,7 @@ const TeamSection: React.FC = () => {
                     </div>
                   </motion.div>
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-1">
                     {member.name}
@@ -178,9 +137,7 @@ const TeamSection: React.FC = () => {
                   <p className="text-blue-600 font-medium mb-3">
                     {member.role}
                   </p>
-                  <p className="text-gray-600 text-sm">
-                    {member.bio}
-                  </p>
+                  <p className="text-gray-600 text-sm">{member.bio}</p>
                 </div>
               </div>
             </motion.div>
@@ -188,7 +145,7 @@ const TeamSection: React.FC = () => {
         </motion.div>
 
         <div className="mt-12 text-center">
-          <motion.div 
+          <motion.div
             className="bg-white rounded-xl shadow-lg p-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -201,7 +158,7 @@ const TeamSection: React.FC = () => {
             <p className="text-gray-600 mb-6">
               We're always looking for talented individuals to join our mission
             </p>
-            <motion.button 
+            <motion.button
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
