@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 
 const Contact: React.FC = () => {
   const fadeInUp = {
@@ -10,9 +10,9 @@ const Contact: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const staggerContainer = {
@@ -21,58 +21,63 @@ const Contact: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
   const contactInfo = [
     {
       icon: Mail,
-      title: 'Email',
-      details: 'support@techcorp.com',
-      subtitle: 'Get in touch via email'
+      title: "Email",
+      details: "info@pagesolutions.co.uk",
+      subtitle: "Get in touch via email",
     },
     {
       icon: Phone,
-      title: 'Phone',
-      details: '+1 (555) 123-4567',
-      subtitle: 'Call us for immediate assistance'
+      title: "Phone",
+      details: "+91 8143578444",
+      subtitle: "Call us for immediate assistance",
     },
     {
       icon: MapPin,
-      title: 'Address',
-      details: '123 Tech Street, Silicon Valley, CA 94105',
-      subtitle: 'Visit our headquarters'
+      title: "Address",
+      details: "",
+      subtitle:
+        "Plot No. 815, B.V.L. Complex, 4th Floor, 100Ft, Road, Sri Swamy Ayyappa Co-operative Society, Madhapur, Hyderabad- 50081.",
     },
     {
       icon: Clock,
-      title: 'Hours',
-      details: 'Mon-Fri: 9AM-6PM PST',
-      subtitle: 'Business hours'
-    }
+      title: "Hours",
+      details: "Mon-Fri: 9AM-6PM PST",
+      subtitle: "Business hours",
+    },
   ];
 
   return (
@@ -86,11 +91,10 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Contact Us
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Ready to transform your business? Get in touch with our experts today
+              Ready to transform your business? Get in touch with our experts
+              today
             </p>
           </motion.div>
         </div>
@@ -98,7 +102,7 @@ const Contact: React.FC = () => {
 
       {/* Contact Info Cards */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
           variants={staggerContainer}
           initial="hidden"
@@ -107,16 +111,16 @@ const Contact: React.FC = () => {
         >
           {contactInfo.map((info, index) => (
             <motion.div
-              key={info.title}
+              key={index}
               variants={fadeInUp}
-              whileHover={{ 
+              whileHover={{
                 y: -10,
                 scale: 1.05,
-                transition: { type: "spring", stiffness: 300, damping: 20 }
+                transition: { type: "spring", stiffness: 300, damping: 20 },
               }}
               className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow"
             >
-              <motion.div 
+              <motion.div
                 className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
@@ -126,12 +130,8 @@ const Contact: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {info.title}
               </h3>
-              <p className="text-gray-900 font-medium mb-1">
-                {info.details}
-              </p>
-              <p className="text-gray-600 text-sm">
-                {info.subtitle}
-              </p>
+              <p className="text-gray-900 font-medium mb-1">{info.details}</p>
+              <p className="text-gray-600 text-sm">{info.subtitle}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -152,7 +152,10 @@ const Contact: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Full Name *
                   </label>
                   <input
@@ -166,7 +169,10 @@ const Contact: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Email Address *
                   </label>
                   <input
@@ -183,7 +189,10 @@ const Contact: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Company
                   </label>
                   <input
@@ -196,7 +205,10 @@ const Contact: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Phone Number
                   </label>
                   <input
@@ -211,7 +223,10 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Subject *
                 </label>
                 <select
@@ -233,7 +248,10 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Message *
                 </label>
                 <textarea
@@ -268,9 +286,7 @@ const Contact: React.FC = () => {
           >
             {/* Map */}
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Find Us
-              </h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Find Us</h3>
               <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg mb-6 flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="h-12 w-12 text-blue-600 mx-auto mb-2" />
@@ -293,7 +309,8 @@ const Contact: React.FC = () => {
                     How quickly can you respond?
                   </h4>
                   <p className="text-gray-600 text-sm">
-                    We typically respond to inquiries within 24 hours during business days.
+                    We typically respond to inquiries within 24 hours during
+                    business days.
                   </p>
                 </div>
                 <div>
@@ -301,7 +318,8 @@ const Contact: React.FC = () => {
                     Do you offer free consultations?
                   </h4>
                   <p className="text-gray-600 text-sm">
-                    Yes! We offer free initial consultations to understand your needs.
+                    Yes! We offer free initial consultations to understand your
+                    needs.
                   </p>
                 </div>
                 <div>
@@ -309,7 +327,8 @@ const Contact: React.FC = () => {
                     What's your project timeline?
                   </h4>
                   <p className="text-gray-600 text-sm">
-                    Project timelines vary based on scope and complexity. We'll provide detailed estimates during consultation.
+                    Project timelines vary based on scope and complexity. We'll
+                    provide detailed estimates during consultation.
                   </p>
                 </div>
               </div>

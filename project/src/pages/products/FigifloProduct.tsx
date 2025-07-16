@@ -299,7 +299,7 @@ const FigifloProduct: React.FC = () => {
       </div>
 
       {/* Pricing Section */}
-      <div className="bg-white">
+      {/* <div className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -354,7 +354,7 @@ const FigifloProduct: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
