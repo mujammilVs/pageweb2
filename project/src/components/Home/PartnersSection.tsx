@@ -58,10 +58,10 @@ const PartnersSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Partners
+            Trusted Clients
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Trusted by industry leaders and backed by strategic partnerships
+            We collaborate with industry leaders to deliver exceptional results
           </p>
         </div>
 
@@ -106,7 +106,7 @@ const PartnersSection: React.FC = () => {
             </div>
             <div className="flex items-center">
               <span className="font-semibold text-blue-600 text-2xl mr-2">
-                50+
+                20+
               </span>
               <span>Countries</span>
             </div>

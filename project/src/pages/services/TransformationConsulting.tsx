@@ -1,92 +1,117 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Settings, Target, Users, BarChart, Lightbulb, Shield } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  CheckCircle,
+  Settings,
+  Target,
+  Users,
+  BarChart,
+  Lightbulb,
+  Shield,
+} from "lucide-react";
+import TransformHeroSection from "../../components/HeroSections/transformingHeroSection";
 
 const TransformationConsulting: React.FC = () => {
   const services = [
     {
       icon: Target,
-      title: 'Strategic Planning',
-      description: 'Develop comprehensive digital transformation strategies aligned with your business goals'
+      title: "Strategic Planning",
+      description:
+        "Develop comprehensive digital transformation strategies aligned with your business goals",
     },
     {
       icon: BarChart,
-      title: 'Process Optimization',
-      description: 'Analyze and optimize existing processes for maximum efficiency and effectiveness'
+      title: "Process Optimization",
+      description:
+        "Analyze and optimize existing processes for maximum efficiency and effectiveness",
     },
     {
       icon: Users,
-      title: 'Change Management',
-      description: 'Guide your organization through transformation with proven change management methodologies'
+      title: "Change Management",
+      description:
+        "Guide your organization through transformation with proven change management methodologies",
     },
     {
       icon: Settings,
-      title: 'Technology Assessment',
-      description: 'Evaluate current technology stack and recommend modernization opportunities'
+      title: "Technology Assessment",
+      description:
+        "Evaluate current technology stack and recommend modernization opportunities",
     },
     {
       icon: Shield,
-      title: 'Risk Management',
-      description: 'Identify and mitigate risks throughout the transformation journey'
+      title: "Risk Management",
+      description:
+        "Identify and mitigate risks throughout the transformation journey",
     },
     {
       icon: Lightbulb,
-      title: 'Innovation Consulting',
-      description: 'Foster innovation culture and implement cutting-edge solutions'
-    }
+      title: "Innovation Consulting",
+      description:
+        "Foster innovation culture and implement cutting-edge solutions",
+    },
   ];
 
   const benefits = [
-    'Reduced transformation risks by 60%',
-    'Accelerated time-to-market by 40%',
-    'Improved operational efficiency by 50%',
-    'Enhanced employee adoption rates',
-    'Measurable ROI within 6 months',
-    'Continuous optimization support'
+    "Reduced transformation risks by 60%",
+    "Accelerated time-to-market by 40%",
+    "Improved operational efficiency by 50%",
+    "Enhanced employee adoption rates",
+    "Measurable ROI within 6 months",
+    "Continuous optimization support",
   ];
 
   const approach = [
     {
-      step: '1',
-      title: 'Assessment & Discovery',
-      description: 'Comprehensive analysis of current state, challenges, and opportunities'
+      step: "1",
+      title: "Assessment & Discovery",
+      description:
+        "Comprehensive analysis of current state, challenges, and opportunities",
     },
     {
-      step: '2',
-      title: 'Strategy Development',
-      description: 'Create customized transformation roadmap with clear milestones'
+      step: "2",
+      title: "Strategy Development",
+      description:
+        "Create customized transformation roadmap with clear milestones",
     },
     {
-      step: '3',
-      title: 'Implementation Planning',
-      description: 'Detailed planning with resource allocation and timeline management'
+      step: "3",
+      title: "Implementation Planning",
+      description:
+        "Detailed planning with resource allocation and timeline management",
     },
     {
-      step: '4',
-      title: 'Execution Support',
-      description: 'Hands-on guidance throughout the implementation process'
+      step: "4",
+      title: "Execution Support",
+      description: "Hands-on guidance throughout the implementation process",
     },
     {
-      step: '5',
-      title: 'Optimization & Scale',
-      description: 'Continuous improvement and scaling of successful initiatives'
-    }
+      step: "5",
+      title: "Optimization & Scale",
+      description:
+        "Continuous improvement and scaling of successful initiatives",
+    },
   ];
 
   const caseStudies = [
     {
-      client: 'Global Manufacturing Corp',
-      challenge: 'Legacy system modernization affecting operational efficiency',
-      solution: 'Comprehensive digital transformation strategy with phased implementation',
-      result: '45% improvement in operational efficiency, $2M cost savings annually'
+      client: "Global Manufacturing Corp",
+      challenge: "Legacy system modernization affecting operational efficiency",
+      solution:
+        "Comprehensive digital transformation strategy with phased implementation",
+      result:
+        "45% improvement in operational efficiency, $2M cost savings annually",
     },
     {
-      client: 'Regional Bank',
-      challenge: 'Digital banking transformation to compete with fintech startups',
-      solution: 'Customer-centric digital strategy with modern technology stack',
-      result: '300% increase in digital adoption, 25% reduction in operational costs'
-    }
+      client: "Regional Bank",
+      challenge:
+        "Digital banking transformation to compete with fintech startups",
+      solution:
+        "Customer-centric digital strategy with modern technology stack",
+      result:
+        "300% increase in digital adoption, 25% reduction in operational costs",
+    },
   ];
 
   return (
@@ -104,7 +129,8 @@ const TransformationConsulting: React.FC = () => {
               Transformation Consulting
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
-              Strategic guidance and expert consultation to navigate your digital transformation journey successfully
+              We help our clients to transform and reinvent their business, from
+              Strategy to Operations to Implementation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -124,6 +150,7 @@ const TransformationConsulting: React.FC = () => {
           </motion.div>
         </div>
       </div>
+      {/* <TransformHeroSection /> */}
 
       {/* Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -132,7 +159,8 @@ const TransformationConsulting: React.FC = () => {
             Our Consulting Services
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Comprehensive consulting services to guide your digital transformation
+            Comprehensive consulting services to guide your digital
+            transformation
           </p>
         </div>
 
@@ -151,9 +179,7 @@ const TransformationConsulting: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {service.title}
               </h3>
-              <p className="text-gray-600">
-                {service.description}
-              </p>
+              <p className="text-gray-600">{service.description}</p>
             </motion.div>
           ))}
         </div>
@@ -172,7 +198,9 @@ const TransformationConsulting: React.FC = () => {
                 Why Choose Our Consulting?
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Our proven methodology and experienced consultants help organizations achieve successful digital transformations with measurable results.
+                Our proven methodology and experienced consultants help
+                organizations achieve successful digital transformations with
+                measurable results.
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -183,7 +211,7 @@ const TransformationConsulting: React.FC = () => {
                 ))}
               </ul>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -207,13 +235,14 @@ const TransformationConsulting: React.FC = () => {
               Our Proven Approach
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              A structured methodology that ensures successful transformation outcomes
+              A structured methodology that ensures successful transformation
+              outcomes
             </p>
           </div>
 
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-blue-200"></div>
-            
+
             <div className="space-y-12">
               {approach.map((phase, index) => (
                 <motion.div
@@ -222,10 +251,10 @@ const TransformationConsulting: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2 }}
                   className={`relative flex items-center ${
-                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                    index % 2 === 0 ? "flex-row" : "flex-row-reverse"
                   }`}
                 >
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                  <div className={`w-1/2 ${index % 2 === 0 ? "pr-8" : "pl-8"}`}>
                     <div className="bg-white rounded-lg shadow-lg p-6">
                       <div className="flex items-center mb-4">
                         <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">
@@ -238,7 +267,7 @@ const TransformationConsulting: React.FC = () => {
                       <p className="text-gray-600">{phase.description}</p>
                     </div>
                   </div>
-                  
+
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
                 </motion.div>
               ))}
@@ -273,16 +302,22 @@ const TransformationConsulting: React.FC = () => {
                 </h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Challenge:</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">
+                      Challenge:
+                    </h4>
                     <p className="text-gray-600">{study.challenge}</p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Solution:</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">
+                      Solution:
+                    </h4>
                     <p className="text-gray-600">{study.solution}</p>
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 mb-2">Result:</h4>
-                    <p className="text-blue-600 font-semibold">{study.result}</p>
+                    <p className="text-blue-600 font-semibold">
+                      {study.result}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -299,7 +334,8 @@ const TransformationConsulting: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let our expert consultants guide you through a successful digital transformation
+              Let our expert consultants guide you through a successful digital
+              transformation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import LocateUs from "../components/LocateUs";
+import ContactHeroSection from "../components/HeroSections/ContactHero";
 
 const Contact: React.FC = () => {
   const fadeInUp = {
@@ -83,7 +85,7 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
+      {/* <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -98,7 +100,9 @@ const Contact: React.FC = () => {
             </p>
           </motion.div>
         </div>
-      </div>
+      </div> */}
+
+      <ContactHeroSection />
 
       {/* Contact Info Cards */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -288,14 +292,24 @@ const Contact: React.FC = () => {
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Find Us</h3>
               <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg mb-6 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-12 w-12 text-blue-600 mx-auto mb-2" />
-                  <p className="text-gray-600">Interactive Map</p>
+                <div className="bg-gray-200 rounded-lg h-64 overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.843012816684!2d78.38826379678954!3d17.451619300000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91667f42ed11%3A0x501f641d013c0e79!2sPage%20Solutions%20Private%20Limited!5e1!3m2!1sen!2sin!4v1752549474605!5m2!1sen!2sin"
+                    width="600"
+                    height="450"
+                    loading="lazy"
+                  ></iframe>
                 </div>
               </div>
-              <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
-                Get Directions
-              </button>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Page+Solutions+Private+Limited,+Hyderabad"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
+                  Get Directions
+                </button>
+              </a>
             </div>
 
             {/* FAQ */}
@@ -335,6 +349,7 @@ const Contact: React.FC = () => {
             </div>
           </motion.div>
         </div>
+        <LocateUs />
       </div>
     </div>
   );

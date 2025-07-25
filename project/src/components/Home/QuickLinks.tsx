@@ -1,16 +1,170 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Cpu, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import { motion } from "framer-motion";
+// import {
+//   Cpu,
+//   Cloud,
+//   Shield,
+//   Zap,
+//   Users,
+//   MessageCircle,
+//   Award,
+//   MapPin,
+// } from "lucide-react";
+
+// const QuickLinks: React.FC = () => {
+//   const containerVariants = {
+//     hidden: { opacity: 0 },
+//     visible: {
+//       opacity: 1,
+//       transition: {
+//         staggerChildren: 0.1,
+//         delayChildren: 0.3,
+//       },
+//     },
+//   };
+
+//   const cardVariants = {
+//     hidden: { y: 50, opacity: 0, scale: 0.9 },
+//     visible: {
+//       y: 0,
+//       opacity: 1,
+//       scale: 1,
+//       transition: {
+//         type: "spring",
+//         stiffness: 100,
+//         damping: 15,
+//       },
+//     },
+//   };
+
+//   const links = [
+//     {
+//       title: "Our Products",
+//       description: "Explore our innovative digital solutions",
+//       icon: Cpu,
+//       path: "/products",
+//       color: "bg-blue-500",
+//     },
+//     {
+//       title: "Our Services",
+//       description: "Professional consulting and support",
+//       icon: Cloud,
+//       path: "/services",
+//       color: "bg-indigo-500",
+//     },
+//     {
+//       title: "Security Solutions",
+//       description: "Enterprise-grade security",
+//       icon: Shield,
+//       path: "/services/banking-cloud",
+//       color: "bg-purple-500",
+//     },
+//     {
+//       title: "Performance",
+//       description: "High-performance solutions",
+//       icon: Zap,
+//       path: "/services/core-platform-modernization",
+//       color: "bg-yellow-500",
+//     },
+//     {
+//       title: "About Us",
+//       description: "Learn about our mission and team",
+//       icon: Users,
+//       path: "/about",
+//       color: "bg-green-500",
+//     },
+//     {
+//       title: "Contact",
+//       description: "Get in touch with our experts",
+//       icon: MessageCircle,
+//       path: "/contact",
+//       color: "bg-red-500",
+//     },
+//     {
+//       title: "Achievements",
+//       description: "Our accomplishments and awards",
+//       icon: Award,
+//       path: "/about",
+//       color: "bg-orange-500",
+//     },
+//     {
+//       title: "Location",
+//       description: "Find our offices worldwide",
+//       icon: MapPin,
+//       path: "/contact",
+//       color: "bg-teal-500",
+//     },
+//   ];
+
+//   return (
+//     <section className="py-16 bg-gray-50">
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//         <div className="text-center mb-12">
+//           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+//             Quick Access
+//           </h2>
+//           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+//             Navigate to the most important sections of our platform
+//           </p>
+//         </div>
+
+//         <motion.div
+//           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+//           variants={containerVariants}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true, amount: 0.2 }}
+//         >
+//           {links.map((link, index) => (
+//             <motion.div
+//               key={index}
+//               variants={cardVariants}
+//               whileHover={{
+//                 scale: 1.05,
+//                 y: -10,
+//                 transition: { type: "spring", stiffness: 300, damping: 20 },
+//               }}
+//               whileTap={{ scale: 0.95 }}
+//               className="group"
+//             >
+//               <Link
+//                 to={link.path}
+//                 className="card-hover-effect block bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 h-full relative z-10"
+//               >
+//                 <div
+//                   className={`${link.color} w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
+//                 >
+//                   <link.icon className="h-6 w-6 text-white" />
+//                 </div>
+//                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
+//                   {link.title}
+//                 </h3>
+//                 <p className="text-gray-600 text-sm">{link.description}</p>
+//               </Link>
+//             </motion.div>
+//           ))}
+//         </motion.div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default QuickLinks;
+
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  Cpu,
+  Cloud,
+  Shield,
+  Zap,
+  Users,
   MessageCircle,
   Award,
-  MapPin
-} from 'lucide-react';
+  MapPin,
+} from "lucide-react";
 
 const QuickLinks: React.FC = () => {
   const containerVariants = {
@@ -19,129 +173,126 @@ const QuickLinks: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.3
-      }
-    }
+        delayChildren: 0.3,
+      },
+    },
   };
 
   const cardVariants = {
-    hidden: { y: 50, opacity: 0, scale: 0.9 },
+    hidden: { y: 40, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      scale: 1,
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 15
-      }
-    }
+        damping: 18,
+      },
+    },
   };
 
   const links = [
     {
-      title: 'Our Products',
-      description: 'Explore our innovative digital solutions',
+      title: "Our Products",
+      description: "Explore our innovative digital solutions",
       icon: Cpu,
-      path: '/products',
-      color: 'bg-blue-500'
+      path: "/products",
+      color: "from-blue-500 to-blue-600",
     },
     {
-      title: 'Our Services',
-      description: 'Professional consulting and support',
+      title: "Our Services",
+      description: "Professional consulting and support",
       icon: Cloud,
-      path: '/services',
-      color: 'bg-indigo-500'
+      path: "/services",
+      color: "from-indigo-500 to-indigo-600",
     },
     {
-      title: 'Security Solutions',
-      description: 'Enterprise-grade security',
+      title: "Security Solutions",
+      description: "Enterprise-grade security",
       icon: Shield,
-      path: '/services/banking-cloud',
-      color: 'bg-purple-500'
+      path: "/services/banking-cloud",
+      color: "from-purple-500 to-purple-600",
     },
     {
-      title: 'Performance',
-      description: 'High-performance solutions',
+      title: "Performance",
+      description: "High-performance solutions",
       icon: Zap,
-      path: '/services/core-platform-modernization',
-      color: 'bg-yellow-500'
+      path: "/services/core-platform-modernization",
+      color: "from-yellow-500 to-yellow-600",
     },
     {
-      title: 'About Us',
-      description: 'Learn about our mission and team',
+      title: "About Us",
+      description: "Learn about our mission and team",
       icon: Users,
-      path: '/about',
-      color: 'bg-green-500'
+      path: "/about",
+      color: "from-green-500 to-green-600",
     },
     {
-      title: 'Contact',
-      description: 'Get in touch with our experts',
+      title: "Contact",
+      description: "Get in touch with our experts",
       icon: MessageCircle,
-      path: '/contact',
-      color: 'bg-red-500'
+      path: "/contact",
+      color: "from-red-500 to-red-600",
     },
     {
-      title: 'Achievements',
-      description: 'Our accomplishments and awards',
+      title: "Achievements",
+      description: "Our accomplishments and awards",
       icon: Award,
-      path: '/about',
-      color: 'bg-orange-500'
+      path: "/about",
+      color: "from-orange-500 to-orange-600",
     },
     {
-      title: 'Location',
-      description: 'Find our offices worldwide',
+      title: "Location",
+      description: "Find our offices worldwide",
       icon: MapPin,
-      path: '/contact',
-      color: 'bg-teal-500'
-    }
+      path: "/contact",
+      color: "from-teal-500 to-teal-600",
+    },
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Quick Access
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900">Quick Access</h2>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
             Navigate to the most important sections of our platform
           </p>
         </div>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {links.map((link, index) => (
+          {links.map((link) => (
             <motion.div
               key={link.title}
               variants={cardVariants}
-              whileHover={{ 
-                scale: 1.05,
-                y: -10,
-                transition: { type: "spring", stiffness: 300, damping: 20 }
+              whileHover={{
+                scale: 1.03,
+                transition: { type: "spring", stiffness: 300, damping: 20 },
               }}
-              whileTap={{ scale: 0.95 }}
-              className="group"
+              className="relative group rounded-xl overflow-hidden shadow-md hover:shadow-lg bg-white transition-all duration-300"
             >
-              <Link
-                to={link.path}
-                className="block bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 h-full"
-              >
-                <div className={`${link.color} w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <link.icon className="h-6 w-6 text-white" />
+              <Link to={link.path} className="block p-6 relative z-10">
+                <div
+                  className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-white bg-gradient-to-br ${link.color}`}
+                >
+                  <link.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">
                   {link.title}
                 </h3>
-                <p className="text-gray-600 text-sm">
-                  {link.description}
-                </p>
+                <p className="text-sm text-gray-600">{link.description}</p>
               </Link>
+
+              {/* Background hover effect from bottom to top */}
+              <div
+                className={`absolute bottom-0 left-0 w-full h-0 bg-gradient-to-t ${link.color} opacity-10 group-hover:h-full transition-all duration-500 z-0`}
+              ></div>
             </motion.div>
           ))}
         </motion.div>

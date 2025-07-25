@@ -1,0 +1,21 @@
+/* HeroSection.module.css */
+.heroWrapper {
+  position: relative;
+  /* background: linear-gradient(to bottom right, #0f172a, #1e3a8a, #312e81); */
+  /* background: linear-gradient(to bottom right, #0f172a, #1e3a8a, #312e81); */
+  color: white;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(to bottom right, #0f172a, #1e3a8a, #312e81);
+  /* background: radial-gradient(circle, rgba(0,255,255,0.2) 0%, transparent 70%); */
+  filter: blur(100px);
+  z-index: 0;
+}

@@ -1,100 +1,123 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Users, Workflow, Zap, BarChart, GitBranch, Play, Palette, Settings } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Star,
+  Users,
+  Zap,
+  BarChart,
+  GitBranch,
+  Play,
+  Palette,
+  Settings,
+} from "lucide-react";
+import figflo from "../../asstes/page-images/digiflo-pagesolutions.webp";
+import digidoxbanner from "../../asstes/page-images/digiflo-features.webp";
 
 const FigifloProduct: React.FC = () => {
   const features = [
     {
       icon: Palette,
-      title: 'Drag & Drop Interface',
-      description: 'Intuitive visual workflow builder with simple drag-and-drop functionality'
+      title: "Drag & Drop Interface",
+      description:
+        "Intuitive visual workflow builder with simple drag-and-drop functionality",
     },
     {
       icon: Users,
-      title: 'Real-time Collaboration',
-      description: 'Work together on workflows with live editing and instant updates'
+      title: "Real-time Collaboration",
+      description:
+        "Work together on workflows with live editing and instant updates",
     },
     {
       icon: Zap,
-      title: 'Advanced Triggers',
-      description: 'Smart triggers that respond to events, schedules, and conditions'
+      title: "Advanced Triggers",
+      description:
+        "Smart triggers that respond to events, schedules, and conditions",
     },
     {
       icon: BarChart,
-      title: 'Performance Analytics',
-      description: 'Detailed insights into workflow performance and bottlenecks'
+      title: "Performance Analytics",
+      description:
+        "Detailed insights into workflow performance and bottlenecks",
     },
     {
       icon: GitBranch,
-      title: 'Conditional Logic',
-      description: 'Create complex workflows with if-then-else logic and branching'
+      title: "Conditional Logic",
+      description:
+        "Create complex workflows with if-then-else logic and branching",
     },
     {
       icon: Settings,
-      title: 'Custom Integrations',
-      description: 'Connect with any system through APIs and webhooks'
-    }
+      title: "Custom Integrations",
+      description: "Connect with any system through APIs and webhooks",
+    },
   ];
 
   const testimonials = [
     {
-      name: 'Marcus Johnson',
-      role: 'Process Manager, AutoFlow Corp',
-      content: 'Figiflo transformed our complex approval processes. What used to take weeks now happens in days with full visibility.',
-      rating: 5
+      name: "Marcus Johnson",
+      role: "Process Manager, AutoFlow Corp",
+      content:
+        "Figiflo transformed our complex approval processes. What used to take weeks now happens in days with full visibility.",
+      rating: 5,
     },
     {
-      name: 'Lisa Chen',
-      role: 'Operations Director, WorkStream Inc',
-      content: 'The visual interface makes it easy for non-technical team members to understand and modify workflows.',
-      rating: 5
-    }
+      name: "Lisa Chen",
+      role: "Operations Director, WorkStream Inc",
+      content:
+        "The visual interface makes it easy for non-technical team members to understand and modify workflows.",
+      rating: 5,
+    },
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$19',
-      period: 'per user/month',
-      features: ['5 active workflows', 'Basic integrations', 'Email support', 'Standard templates'],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$49',
-      period: 'per user/month',
-      features: ['Unlimited workflows', 'Advanced integrations', 'Priority support', 'Custom templates', 'Analytics dashboard'],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: 'pricing',
-      features: ['Custom deployment', 'Dedicated support', 'Advanced security', 'Custom integrations', 'SLA guarantee'],
-      popular: false
-    }
-  ];
+  // const pricingPlans = [
+  //   {
+  //     name: 'Starter',
+  //     price: '$19',
+  //     period: 'per user/month',
+  //     features: ['5 active workflows', 'Basic integrations', 'Email support', 'Standard templates'],
+  //     popular: false
+  //   },
+  //   {
+  //     name: 'Professional',
+  //     price: '$49',
+  //     period: 'per user/month',
+  //     features: ['Unlimited workflows', 'Advanced integrations', 'Priority support', 'Custom templates', 'Analytics dashboard'],
+  //     popular: true
+  //   },
+  //   {
+  //     name: 'Enterprise',
+  //     price: 'Custom',
+  //     period: 'pricing',
+  //     features: ['Custom deployment', 'Dedicated support', 'Advanced security', 'Custom integrations', 'SLA guarantee'],
+  //     popular: false
+  //   }
+  // ];
 
   const workflowTypes = [
     {
-      title: 'Approval Workflows',
-      description: 'Streamline approval processes with automated routing',
+      title: "Approval Workflows",
+      description: "Streamline approval processes with automated routing",
       icon: GitBranch,
-      examples: ['Document approvals', 'Budget requests', 'Leave applications']
+      examples: ["Document approvals", "Budget requests", "Leave applications"],
     },
     {
-      title: 'Data Processing',
-      description: 'Automate data transformation and integration',
+      title: "Data Processing",
+      description: "Automate data transformation and integration",
       icon: BarChart,
-      examples: ['Data validation', 'Report generation', 'Data synchronization']
+      examples: [
+        "Data validation",
+        "Report generation",
+        "Data synchronization",
+      ],
     },
     {
-      title: 'Customer Onboarding',
-      description: 'Create seamless customer experience workflows',
+      title: "Customer Onboarding",
+      description: "Create seamless customer experience workflows",
       icon: Users,
-      examples: ['Account setup', 'Welcome sequences', 'Compliance checks']
-    }
+      examples: ["Account setup", "Welcome sequences", "Compliance checks"],
+    },
   ];
 
   return (
@@ -108,14 +131,15 @@ const FigifloProduct: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Figiflo
-              </h1>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Figiflo</h1>
               <p className="text-xl md:text-2xl text-emerald-100 mb-8">
                 Visual Workflow Designer
               </p>
               <p className="text-lg text-emerald-200 mb-8">
-                Create, manage, and optimize complex workflows with our intuitive visual interface and powerful automation capabilities. Turn your business processes into efficient, automated workflows.
+                Create, manage, and optimize complex workflows with our
+                intuitive visual interface and powerful automation capabilities.
+                Turn your business processes into efficient, automated
+                workflows.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -131,7 +155,7 @@ const FigifloProduct: React.FC = () => {
                 </button>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -139,13 +163,13 @@ const FigifloProduct: React.FC = () => {
               className="relative"
             >
               <img
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400"
+                src={figflo}
                 alt="Figiflo Workflow Builder"
                 className="rounded-xl shadow-2xl"
               />
-              <div className="absolute -top-4 -right-4 bg-orange-400 text-orange-900 px-4 py-2 rounded-full text-sm font-bold">
+              {/* <div className="absolute -top-4 -right-4 bg-orange-400 text-orange-900 px-4 py-2 rounded-full text-sm font-bold">
                 Rising Star
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>
@@ -160,6 +184,9 @@ const FigifloProduct: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Everything you need to design, deploy, and manage complex workflows
           </p>
+        </div>
+        <div className="flex items-center justify-center p-6  m-4">
+          <img width={400} src={digidoxbanner} alt="" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -177,9 +204,7 @@ const FigifloProduct: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {feature.title}
               </h3>
-              <p className="text-gray-600">
-                {feature.description}
-              </p>
+              <p className="text-gray-600">{feature.description}</p>
             </motion.div>
           ))}
         </div>
@@ -193,7 +218,8 @@ const FigifloProduct: React.FC = () => {
               Workflow Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Common workflow types that organizations use to streamline operations
+              Common workflow types that organizations use to streamline
+              operations
             </p>
           </div>
 
@@ -212,12 +238,13 @@ const FigifloProduct: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {type.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
-                  {type.description}
-                </p>
+                <p className="text-gray-600 mb-4">{type.description}</p>
                 <div className="space-y-2">
                   {type.examples.map((example, exampleIndex) => (
-                    <div key={exampleIndex} className="flex items-center justify-center">
+                    <div
+                      key={exampleIndex}
+                      className="flex items-center justify-center"
+                    >
                       <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
                       <span className="text-sm text-gray-700">{example}</span>
                     </div>
@@ -245,8 +272,12 @@ const FigifloProduct: React.FC = () => {
             <div className="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg mb-6 flex items-center justify-center">
               <div className="text-center">
                 <Play className="h-16 w-16 text-emerald-600 mx-auto mb-4" />
-                <p className="text-gray-600 text-lg">Interactive Workflow Demo</p>
-                <p className="text-sm text-gray-500">Click to see Figiflo in action</p>
+                <p className="text-gray-600 text-lg">
+                  Interactive Workflow Demo
+                </p>
+                <p className="text-sm text-gray-500">
+                  Click to see Figiflo in action
+                </p>
               </div>
             </div>
             <div className="text-center">
@@ -267,7 +298,8 @@ const FigifloProduct: React.FC = () => {
               What Our Users Say
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Real feedback from teams using Figiflo to streamline their workflows
+              Real feedback from teams using Figiflo to streamline their
+              workflows
             </p>
           </div>
 
@@ -282,14 +314,19 @@ const FigifloProduct: React.FC = () => {
               >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 text-lg">
                   "{testimonial.content}"
                 </p>
                 <div>
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                  <p className="font-semibold text-gray-900">
+                    {testimonial.name}
+                  </p>
                   <p className="text-gray-600">{testimonial.role}</p>
                 </div>
               </motion.div>
@@ -364,7 +401,8 @@ const FigifloProduct: React.FC = () => {
               Ready to Streamline Your Workflows?
             </h2>
             <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of teams using Figiflo to automate their business processes
+              Join thousands of teams using Figiflo to automate their business
+              processes
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

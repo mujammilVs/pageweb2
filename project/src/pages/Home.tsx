@@ -6,10 +6,9 @@ import ServicesSection from "../components/Home/ServicesSection";
 import PartnersSection from "../components/Home/PartnersSection";
 import AccomplishmentsSection from "../components/Home/AccomplishmentsSection";
 import TeamSection from "../components/Home/TeamSection";
-import RequestConsultant from "../components/Home/RequestConsultant";
 import LocationSection from "../components/Home/LocationSection";
 import RelatedPages from "../components/Home/RelatedPages";
-import TeamMembers from "../components/pageteam/TeamSection";
+import OurPartners from "../components/OurPartners";
 
 const Home: React.FC = () => {
   return (
@@ -22,11 +21,12 @@ const Home: React.FC = () => {
       <QuickLinks />
       <ServicesSection />
       <PartnersSection />
+      <OurPartners />
       <AccomplishmentsSection />
       <TeamSection />
       {/* <TeamMembers /> */}
 
-      <RequestConsultant />
+      {/* <RequestConsultant /> */}
       <LocationSection />
       <RelatedPages />
     </motion.div>

@@ -1,100 +1,130 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Users, Search, Shield, Cloud, FileText, Share2, Clock, Lock } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Star,
+  Users,
+  Search,
+  Shield,
+  Cloud,
+  FileText,
+  Share2,
+  Clock,
+  Lock,
+} from "lucide-react";
+import digidox from "../../asstes/page-images/digidox-pagesolutions.webp";
+
+import digidoxbanner from "../../asstes/page-images/digidox-banner.webp";
 
 const DigidoxProduct: React.FC = () => {
   const features = [
     {
       icon: Search,
-      title: 'Smart Document Search',
-      description: 'AI-powered search that understands context and finds documents instantly'
+      title: "Management & Archival",
+      description:
+        "Efficiently manage and archive documents with intelligent search and retrieval capabilities.",
     },
     {
       icon: FileText,
-      title: 'Automated Categorization',
-      description: 'Machine learning automatically organizes documents by type and content'
+      title: "Easy & Dynamic Document Indexing",
+      description:
+        "Automatically categorize and index documents based on content and metadata for quick access.",
     },
     {
       icon: Share2,
-      title: 'Secure Sharing',
-      description: 'Share documents securely with permission controls and audit trails'
+      title: "Detailed Document Version Control",
+      description:
+        "Maintain a full history of document revisions with precise version tracking and rollback options.",
     },
     {
       icon: Clock,
-      title: 'Version Control',
-      description: 'Track document changes with comprehensive version history'
+      title: "Granular Document Access Control",
+      description:
+        "Define user-specific permissions to ensure secure, role-based access to sensitive documents.",
     },
     {
       icon: Lock,
-      title: 'Advanced Security',
-      description: 'Enterprise-grade encryption and compliance with data protection standards'
+      title: "Workflow and Document Routing",
+      description:
+        "Streamline review and approval processes with configurable workflows and automated routing.",
     },
     {
       icon: Cloud,
-      title: 'Cloud Integration',
-      description: 'Seamless integration with popular cloud storage providers'
-    }
+      title: "Complete Audit Trail",
+      description:
+        "Track all document activities with time-stamped logs for compliance and transparency.",
+    },
   ];
 
-  const testimonials = [
-    {
-      name: 'Amanda Rodriguez',
-      role: 'Head of Operations, LegalFirm Pro',
-      content: 'Digidox revolutionized how we handle legal documents. Search time reduced by 90% and our compliance improved dramatically.',
-      rating: 5
-    },
-    {
-      name: 'James Wilson',
-      role: 'IT Director, Healthcare Plus',
-      content: 'The automated categorization feature saved us countless hours. Our document management is now seamless and secure.',
-      rating: 5
-    }
-  ];
+  // const testimonials = [
+  //   {
+  //     name: "Amanda Rodriguez",
+  //     role: "Head of Operations, LegalFirm Pro",
+  //     content:
+  //       "Digidox revolutionized how we handle legal documents. Search time reduced by 90% and our compliance improved dramatically.",
+  //     rating: 5,
+  //   },
+  //   {
+  //     name: "James Wilson",
+  //     role: "IT Director, Healthcare Plus",
+  //     content:
+  //       "The automated categorization feature saved us countless hours. Our document management is now seamless and secure.",
+  //     rating: 5,
+  //   },
+  // ];
 
-  const pricingPlans = [
-    {
-      name: 'Professional',
-      price: '$49',
-      period: 'per user/month',
-      features: ['5GB storage per user', 'Basic search', 'Standard integrations', 'Email support'],
-      popular: false
-    },
-    {
-      name: 'Business',
-      price: '$99',
-      period: 'per user/month',
-      features: ['50GB storage per user', 'AI-powered search', 'Advanced integrations', 'Priority support', 'Custom workflows'],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: 'pricing',
-      features: ['Unlimited storage', 'Advanced AI features', 'Custom integrations', 'Dedicated support', 'On-premise deployment'],
-      popular: false
-    }
-  ];
+  // const pricingPlans = [
+  //   {
+  //     name: 'Professional',
+  //     price: '$49',
+  //     period: 'per user/month',
+  //     features: ['5GB storage per user', 'Basic search', 'Standard integrations', 'Email support'],
+  //     popular: false
+  //   },
+  //   {
+  //     name: 'Business',
+  //     price: '$99',
+  //     period: 'per user/month',
+  //     features: ['50GB storage per user', 'AI-powered search', 'Advanced integrations', 'Priority support', 'Custom workflows'],
+  //     popular: true
+  //   },
+  //   {
+  //     name: 'Enterprise',
+  //     price: 'Custom',
+  //     period: 'pricing',
+  //     features: ['Unlimited storage', 'Advanced AI features', 'Custom integrations', 'Dedicated support', 'On-premise deployment'],
+  //     popular: false
+  //   }
+  // ];
 
   const useCases = [
     {
-      title: 'Legal Industry',
-      description: 'Streamline case management and document discovery',
+      title: "Legal Industry",
+      description: "Streamline case management and document discovery",
       icon: Shield,
-      benefits: ['Faster case preparation', 'Improved compliance', 'Reduced legal risks']
+      benefits: [
+        "Faster case preparation",
+        "Improved compliance",
+        "Reduced legal risks",
+      ],
     },
     {
-      title: 'Healthcare',
-      description: 'Secure patient record management and compliance',
+      title: "Healthcare",
+      description: "Secure patient record management and compliance",
       icon: FileText,
-      benefits: ['HIPAA compliance', 'Quick record retrieval', 'Audit trails']
+      benefits: ["HIPAA compliance", "Quick record retrieval", "Audit trails"],
     },
     {
-      title: 'Financial Services',
-      description: 'Regulatory document management and reporting',
+      title: "Financial Services",
+      description: "Regulatory document management and reporting",
       icon: Lock,
-      benefits: ['Regulatory compliance', 'Secure document sharing', 'Automated reporting']
-    }
+      benefits: [
+        "Regulatory compliance",
+        "Secure document sharing",
+        "Automated reporting",
+      ],
+    },
   ];
 
   return (
@@ -108,14 +138,19 @@ const DigidoxProduct: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Digidox
-              </h1>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Digidox</h1>
               <p className="text-xl md:text-2xl text-purple-100 mb-8">
-                Smart Document Management Platform
+                Document Management & Archival
               </p>
               <p className="text-lg text-purple-200 mb-8">
-                Revolutionize document handling with AI-powered organization, intelligent search, and seamless collaboration tools. Transform your document chaos into organized, searchable, and secure digital assets.
+                {/* Revolutionize document handling with AI-powered organization,
+                intelligent search, and seamless collaboration tools. Transform
+                your document chaos into organized, searchable, and secure
+                digital assets. */}
+                <strong>digidox.ai</strong> is a powerful digital transformation
+                platform combining intuitive business process management with
+                enterprise-grade document archival to simplify and elevate
+                business operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -130,7 +165,7 @@ const DigidoxProduct: React.FC = () => {
                 </button>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -138,13 +173,13 @@ const DigidoxProduct: React.FC = () => {
               className="relative"
             >
               <img
-                src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600&h=400"
+                src={digidox}
                 alt="Digidox Interface"
                 className="rounded-xl shadow-2xl"
               />
-              <div className="absolute -top-4 -right-4 bg-green-400 text-green-900 px-4 py-2 rounded-full text-sm font-bold">
+              {/* <div className="absolute -top-4 -right-4 bg-green-400 text-green-900 px-4 py-2 rounded-full text-sm font-bold">
                 New Features
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>
@@ -154,11 +189,16 @@ const DigidoxProduct: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Intelligent Document Management
+            Salient Features
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Advanced features that make document management effortless and secure
+            Advanced features that make document management effortless and
+            secure
           </p>
+        </div>
+
+        <div className="flex items-center justify-center p-6  m-4">
+          <img width={400} src={digidoxbanner} alt="" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -176,9 +216,7 @@ const DigidoxProduct: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {feature.title}
               </h3>
-              <p className="text-gray-600">
-                {feature.description}
-              </p>
+              <p className="text-gray-600">{feature.description}</p>
             </motion.div>
           ))}
         </div>
@@ -211,12 +249,13 @@ const DigidoxProduct: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {useCase.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
-                  {useCase.description}
-                </p>
+                <p className="text-gray-600 mb-4">{useCase.description}</p>
                 <ul className="space-y-2">
                   {useCase.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center justify-center">
+                    <li
+                      key={benefitIndex}
+                      className="flex items-center justify-center"
+                    >
                       <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
                       <span className="text-sm text-gray-700">{benefit}</span>
                     </li>
@@ -229,7 +268,7 @@ const DigidoxProduct: React.FC = () => {
       </div>
 
       {/* Testimonials Section */}
-      <div className="bg-gray-50">
+      {/* <div className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -251,21 +290,26 @@ const DigidoxProduct: React.FC = () => {
               >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 text-lg">
                   "{testimonial.content}"
                 </p>
                 <div>
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                  <p className="font-semibold text-gray-900">
+                    {testimonial.name}
+                  </p>
                   <p className="text-gray-600">{testimonial.role}</p>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Pricing Section */}
       {/* <div className="bg-white">
@@ -333,7 +377,8 @@ const DigidoxProduct: React.FC = () => {
               Ready to Transform Your Document Management?
             </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of organizations using Digidox to streamline their document workflows
+              Join thousands of organizations using Digidox to streamline their
+              document workflows
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
