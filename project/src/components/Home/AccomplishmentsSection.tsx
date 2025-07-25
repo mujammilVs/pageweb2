@@ -14,7 +14,7 @@ const AccomplishmentsSection: React.FC = () => {
     {
       year: '2023',
       title: 'Global Expansion',
-      description: 'Expanded operations to 50+ countries worldwide',
+      description: 'Expanded operations to 20+ countries worldwide',
       icon: Globe,
       color: 'from-blue-400 to-blue-500'
     },
@@ -37,8 +37,8 @@ const AccomplishmentsSection: React.FC = () => {
   const stats = [
     { number: '1000+', label: 'Projects Completed', color: 'text-blue-600' },
     { number: '500+', label: 'Happy Clients', color: 'text-green-600' },
-    { number: '50+', label: 'Countries', color: 'text-purple-600' },
-    { number: '10+', label: 'Years Experience', color: 'text-orange-600' }
+    { number: '20+', label: 'Countries', color: 'text-purple-600' },
+    { number: '15+', label: 'Years Experience', color: 'text-orange-600' }
   ];
 
   return (

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ArrowRight, Settings, Database, Shield, Cloud } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowRight, Settings, Database, Shield, Cloud } from "lucide-react";
 
 const ServicesSection: React.FC = () => {
   const containerVariants = {
@@ -10,9 +10,9 @@ const ServicesSection: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const serviceVariants = {
@@ -23,44 +23,68 @@ const ServicesSection: React.FC = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 15
-      }
-    }
+        damping: 15,
+      },
+    },
   };
 
   const services = [
     {
-      title: 'Transformation Consulting',
-      description: 'Strategic guidance for your digital transformation journey with expert consultants.',
+      title: "Transformation Consulting",
+      description:
+        "Strategic guidance for your digital transformation journey with expert consultants.",
       icon: Settings,
-      features: ['Strategic Planning', 'Process Optimization', 'Change Management'],
-      path: '/services/transformation-consulting',
-      color: 'from-blue-500 to-blue-600'
+      features: [
+        "Strategic Planning",
+        "Change Management",
+        "Technology Assessment",
+        "Implementation Roadmap",
+      ],
+      path: "/services/transformation-consulting",
+      color: "from-blue-500 to-blue-600",
     },
     {
-      title: 'Core Platform Modernization',
-      description: 'Upgrade your legacy systems with modern, scalable architecture.',
+      title: "Core Platform Modernization",
+      description:
+        "Upgrade your legacy systems with modern, scalable architecture.",
       icon: Database,
-      features: ['Legacy Migration', 'API Integration', 'Performance Optimization'],
-      path: '/services/core-platform-modernization',
-      color: 'from-indigo-500 to-indigo-600'
+      features: [
+        "Legacy System Migration",
+        "API Integration",
+        "Performance Optimization",
+        "Security Enhancement",
+      ],
+      path: "/services/core-platform-modernization",
+      color: "from-indigo-500 to-indigo-600",
     },
     {
-      title: 'Digital Banking Services',
-      description: 'Comprehensive digital banking solutions for modern financial institutions.',
+      title: "Digital Banking Services",
+      description:
+        "Comprehensive digital banking solutions for modern financial institutions.",
       icon: Shield,
-      features: ['Mobile Banking', 'Payment Processing', 'Fraud Detection'],
-      path: '/services/digital-banking',
-      color: 'from-purple-500 to-purple-600'
+      features: [
+        "Mobile Banking",
+        "Payment Processing",
+        "Risk Management",
+        "Compliance Solutions",
+      ],
+      path: "/services/digital-banking",
+      color: "from-purple-500 to-purple-600",
     },
     {
-      title: 'Banking Cloud Services',
-      description: 'Secure, scalable cloud infrastructure specifically designed for banking.',
+      title: "Banking Cloud Services",
+      description:
+        "Secure, scalable cloud infrastructure specifically designed for banking.",
       icon: Cloud,
-      features: ['Cloud Migration', 'Security Compliance', 'Disaster Recovery'],
-      path: '/services/banking-cloud',
-      color: 'from-teal-500 to-teal-600'
-    }
+      features: [
+        "Cloud Migration",
+        "Security & Compliance",
+        "Disaster Recovery",
+        "Cost Optimization",
+      ],
+      path: "/services/banking-cloud",
+      color: "from-teal-500 to-teal-600",
+    },
   ];
 
   return (
@@ -75,7 +99,7 @@ const ServicesSection: React.FC = () => {
           </p>
         </div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -86,10 +110,11 @@ const ServicesSection: React.FC = () => {
             <motion.div
               key={service.title}
               variants={serviceVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.02,
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-                transition: { duration: 0.3 }
+                boxShadow:
+                  "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                transition: { duration: 0.3 },
               }}
               className="group"
             >
@@ -106,21 +131,22 @@ const ServicesSection: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="p-6">
-                  <p className="text-gray-600 mb-4">
-                    {service.description}
-                  </p>
-                  
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+
                   <div className="space-y-2 mb-6">
                     {service.features.map((feature) => (
-                      <div key={feature} className="flex items-center space-x-2">
+                      <div
+                        key={feature}
+                        className="flex items-center space-x-2"
+                      >
                         <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
                         <span className="text-sm text-gray-700">{feature}</span>
                       </div>
                     ))}
                   </div>
-                  
+
                   <Link
                     to={service.path}
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-1 transition-all"
@@ -130,7 +156,11 @@ const ServicesSection: React.FC = () => {
                       <motion.div
                         className="ml-2"
                         whileHover={{ x: 5 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
                       >
                         <ArrowRight className="h-4 w-4" />
                       </motion.div>
@@ -143,10 +173,7 @@ const ServicesSection: React.FC = () => {
         </motion.div>
 
         <div className="text-center mt-12">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               to="/services"
               className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"

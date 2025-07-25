@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
               Leading the digital transformation with innovative solutions for
               modern businesses.
             </p>
-            <div className="space-y-2">
+            <div className="space-y-2 text-gray-400">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-blue-400" />
                 <span className="text-sm">info@pagesolutions.co.uk</span>
@@ -74,9 +74,9 @@ const Footer: React.FC = () => {
                 <span className="text-sm">+91 8143578444</span>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-blue-400" />
+                <MapPin className="h-4 w-10 text-blue-400" />
                 <span className="text-sm">
-                  "Plot No. 815, B.V.L. Complex, 4th Floor, 100Ft, Road, Sri Swamy Ayyappa Co-operative Society, Madhapur, Hyderabad- 500081.",
+                  Plot No. 815, B.V.L. Complex, 4th Floor, 100Ft, Road, Sri Swamy Ayyappa Co-operative Society, Madhapur, Hyderabad- 500081.
                 </span>
               </div>
             </div>

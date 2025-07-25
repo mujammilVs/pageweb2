@@ -4,6 +4,8 @@ import { Linkedin, Twitter, Mail } from "lucide-react";
 
 import team1 from "../../asstes/page-images/sridhar-ceo.webp";
 import team2 from "../../asstes/page-images/krishna-member.webp";
+import RequestConsultant from "./RequestConsultant";
+import RequestConsultantBanner from "../RequestConsultantBanner";
 
 const TeamSection: React.FC = () => {
   const containerVariants = {
@@ -134,17 +136,17 @@ const TeamSection: React.FC = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-blue-600 font-medium mb-3">
+                  {/* <p className="text-blue-600 font-medium mb-3">
                     {member.role}
-                  </p>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
+                  </p> */}
+                  {/* <p className="text-gray-600 text-sm">{member.bio}</p> */}
                 </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <motion.div
             className="bg-white rounded-xl shadow-lg p-8"
             initial={{ opacity: 0, y: 30 }}
@@ -166,7 +168,8 @@ const TeamSection: React.FC = () => {
               View Open Positions
             </motion.button>
           </motion.div>
-        </div>
+        </div> */}
+        <RequestConsultantBanner />
       </div>
     </section>
   );
