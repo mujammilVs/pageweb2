@@ -54,11 +54,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img
-                src={logo}
-                alt="PAGE Solutions"
-                className="h-8 w-auto"
-              />
+              <img src={logo} alt="PAGE Solutions" className="h-8 w-auto" />
             </div>
             <p className="text-gray-400 text-sm">
               Leading the digital transformation with innovative solutions for
@@ -74,9 +70,10 @@ const Footer: React.FC = () => {
                 <span className="text-sm">+91 8143578444</span>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-10 text-blue-400" />
+                <MapPin className="h-4 w-4 text-blue-400" />
                 <span className="text-sm">
-                  Plot No. 815, B.V.L. Complex, 4th Floor, 100Ft, Road, Sri Swamy Ayyappa Co-operative Society, Madhapur, Hyderabad- 500081.
+                  Plot No. 815, B.V.L. Complex, 4th Floor, 100Ft. Road, Madhapur, Hyderabad-
+                  500081.
                 </span>
               </div>
             </div>
@@ -164,7 +161,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2024 TechCorp. All rights reserved.
+            © {new Date().getFullYear()} PageSolutions.co.uk . All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link

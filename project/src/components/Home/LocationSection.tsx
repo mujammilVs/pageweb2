@@ -15,7 +15,7 @@ const LocationSection: React.FC = () => {
     {
       city: "UK",
       address:
-        "No. 424, Legacy Center, Hanworth Trading Estate, Feltham, Tw13 6dh, London. UK",
+        "No. 424, Legacy Center, Hanworth Trading Estate, Feltham,      Tw13 6dh, London. UK",
       phone: "+44 845 257 3744",
       email: "info@pagesolutions.co.uk",
       hours: "Mon-Fri: 9AM-6PM BST",
@@ -23,7 +23,7 @@ const LocationSection: React.FC = () => {
     {
       city: "UAE",
       address:
-        "No. 424, Legacy Center, Hanworth Trading Estate, Feltham, Tw13 6dh, London. UK",
+        "Office 1505, 15th Floor , Barjuman Business Towers, Sheikh Zayed Street, AL Mankhool - Dubai, UAE",
       phone: "+44 20 7123 4567",
       email: "info@pagesolutions.co.uk",
       hours: "Mon-Fri: 9AM-6PM GMT",
@@ -128,10 +128,10 @@ const LocationSection: React.FC = () => {
               We offer remote consultations and support worldwide
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+              {/* <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
                 Schedule Video Call
-              </button>
-              <button className="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
+              </button> */}
+              <button  className="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
                 Contact Support
               </button>
             </div>

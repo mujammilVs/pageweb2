@@ -1,77 +1,115 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Smartphone, CreditCard, Shield, BarChart, Users, Globe, CheckCircle } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Smartphone,
+  CreditCard,
+  Shield,
+  BarChart,
+  Users,
+  Globe,
+  CheckCircle,
+} from "lucide-react";
 
 const DigitalBankingServices: React.FC = () => {
   const services = [
     {
       icon: Smartphone,
-      title: 'Mobile Banking Platform',
-      description: 'Comprehensive mobile banking solutions with intuitive user experience'
+      title: "Mobile Banking Platform",
+      description:
+        "Comprehensive mobile banking solutions with intuitive user experience",
     },
     {
       icon: CreditCard,
-      title: 'Payment Processing',
-      description: 'Secure, fast payment processing systems with multi-channel support'
+      title: "Payment Processing",
+      description:
+        "Secure, fast payment processing systems with multi-channel support",
     },
     {
       icon: Shield,
-      title: 'Fraud Detection',
-      description: 'AI-powered fraud detection and prevention systems'
+      title: "Fraud Detection",
+      description: "AI-powered fraud detection and prevention systems",
     },
     {
       icon: BarChart,
-      title: 'Analytics & Reporting',
-      description: 'Advanced analytics for customer insights and business intelligence'
+      title: "Analytics & Reporting",
+      description:
+        "Advanced analytics for customer insights and business intelligence",
     },
     {
       icon: Users,
-      title: 'Customer Experience',
-      description: 'Personalized banking experiences across all touchpoints'
+      title: "Customer Experience",
+      description: "Personalized banking experiences across all touchpoints",
     },
     {
       icon: Globe,
-      title: 'Digital Transformation',
-      description: 'Complete digital banking transformation and modernization'
-    }
+      title: "Digital Transformation",
+      description: "Complete digital banking transformation and modernization",
+    },
   ];
 
   const features = [
     {
-      category: 'Mobile Banking',
-      items: ['Account Management', 'Fund Transfers', 'Bill Payments', 'Mobile Check Deposit']
+      category: "Mobile Banking",
+      items: [
+        "Account Management",
+        "Fund Transfers",
+        "Bill Payments",
+        "Mobile Check Deposit",
+      ],
     },
     {
-      category: 'Digital Payments',
-      items: ['Contactless Payments', 'P2P Transfers', 'QR Code Payments', 'Digital Wallets']
+      category: "Digital Payments",
+      items: [
+        "Contactless Payments",
+        "P2P Transfers",
+        "QR Code Payments",
+        "Digital Wallets",
+      ],
     },
     {
-      category: 'Security',
-      items: ['Biometric Authentication', 'Multi-Factor Authentication', 'Fraud Monitoring', 'Encryption']
+      category: "Security",
+      items: [
+        "Biometric Authentication",
+        "Multi-Factor Authentication",
+        "Fraud Monitoring",
+        "Encryption",
+      ],
     },
     {
-      category: 'Analytics',
-      items: ['Customer Insights', 'Transaction Analytics', 'Risk Assessment', 'Compliance Reporting']
-    }
+      category: "Analytics",
+      items: [
+        "Customer Insights",
+        "Transaction Analytics",
+        "Risk Assessment",
+        "Compliance Reporting",
+      ],
+    },
   ];
 
   const benefits = [
-    '50% reduction in operational costs',
-    '300% increase in digital adoption',
-    '90% improvement in customer satisfaction',
-    '24/7 banking services availability',
-    'Enhanced security and compliance',
-    'Faster time-to-market for new products'
+    "50% reduction in operational costs",
+    "300% increase in digital adoption",
+    "90% improvement in customer satisfaction",
+    "24/7 banking services availability",
+    "Enhanced security and compliance",
+    "Faster time-to-market for new products",
   ];
 
   const compliance = [
-    { name: 'PCI DSS', description: 'Payment Card Industry Data Security Standard' },
-    { name: 'SOX', description: 'Sarbanes-Oxley Act compliance' },
-    { name: 'GDPR', description: 'General Data Protection Regulation' },
-    { name: 'ISO 27001', description: 'Information Security Management' },
-    { name: 'Basel III', description: 'International banking regulations' },
-    { name: 'AML/KYC', description: 'Anti-Money Laundering & Know Your Customer' }
+    {
+      name: "PCI DSS",
+      description: "Payment Card Industry Data Security Standard",
+    },
+    { name: "SOX", description: "Sarbanes-Oxley Act compliance" },
+    { name: "GDPR", description: "General Data Protection Regulation" },
+    { name: "ISO 27001", description: "Information Security Management" },
+    { name: "Basel III", description: "International banking regulations" },
+    {
+      name: "AML/KYC",
+      description: "Anti-Money Laundering & Know Your Customer",
+    },
   ];
 
   return (
@@ -89,7 +127,8 @@ const DigitalBankingServices: React.FC = () => {
               Digital Banking Services
             </h1>
             <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto mb-8">
-              Comprehensive digital banking solutions for modern financial institutions
+              Comprehensive digital banking solutions for modern financial
+              institutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -117,7 +156,8 @@ const DigitalBankingServices: React.FC = () => {
             Our Digital Banking Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Complete suite of digital banking services to transform your financial institution
+            Complete suite of digital banking services to transform your
+            financial institution
           </p>
         </div>
 
@@ -128,17 +168,21 @@ const DigitalBankingServices: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+              className="relative group rounded-xl overflow-hidden shadow-md hover:shadow-lg bg-white transition-all duration-300"
             >
-              <div className="bg-green-100 rounded-lg p-3 w-fit mb-4">
-                <service.icon className="h-6 w-6 text-green-600" />
+              {/* Background hover animation */}
+              <div className="absolute bottom-0 left-0 w-full h-0 bg-gradient-to-b from-green-500 to-green-600 opacity-10 group-hover:h-full transition-all duration-500 z-0" />
+
+              {/* Content */}
+              <div className="relative z-10 p-6">
+                <div className="bg-green-100 rounded-lg p-3 w-fit mb-4">
+                  <service.icon className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600">{service.description}</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-600">
-                {service.description}
-              </p>
             </motion.div>
           ))}
         </div>
@@ -152,7 +196,8 @@ const DigitalBankingServices: React.FC = () => {
               Comprehensive Features
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Everything you need to deliver exceptional digital banking experiences
+              Everything you need to deliver exceptional digital banking
+              experiences
             </p>
           </div>
 
@@ -195,7 +240,9 @@ const DigitalBankingServices: React.FC = () => {
                 Transform Your Banking Experience
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Our digital banking solutions help financial institutions deliver superior customer experiences while reducing costs and improving operational efficiency.
+                Our digital banking solutions help financial institutions
+                deliver superior customer experiences while reducing costs and
+                improving operational efficiency.
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -206,7 +253,7 @@ const DigitalBankingServices: React.FC = () => {
                 ))}
               </ul>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -230,7 +277,8 @@ const DigitalBankingServices: React.FC = () => {
               Security & Compliance
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Built with the highest security standards and regulatory compliance
+              Built with the highest security standards and regulatory
+              compliance
             </p>
           </div>
 
@@ -249,9 +297,7 @@ const DigitalBankingServices: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {item.name}
                 </h3>
-                <p className="text-gray-600 text-sm">
-                  {item.description}
-                </p>
+                <p className="text-gray-600 text-sm">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -285,31 +331,45 @@ const DigitalBankingServices: React.FC = () => {
                 </h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Challenge:
+                    </h4>
                     <p className="text-gray-600">
-                      Outdated banking systems limiting customer growth and digital adoption
+                      Outdated banking systems limiting customer growth and
+                      digital adoption
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Solution:
+                    </h4>
                     <p className="text-gray-600">
-                      Complete digital banking transformation with mobile-first approach
+                      Complete digital banking transformation with mobile-first
+                      approach
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Results:
+                    </h4>
                     <ul className="space-y-2">
                       <li className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        <span className="text-gray-700">400% increase in mobile adoption</span>
+                        <span className="text-gray-700">
+                          400% increase in mobile adoption
+                        </span>
                       </li>
                       <li className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        <span className="text-gray-700">35% reduction in operational costs</span>
+                        <span className="text-gray-700">
+                          35% reduction in operational costs
+                        </span>
                       </li>
                       <li className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        <span className="text-gray-700">95% customer satisfaction score</span>
+                        <span className="text-gray-700">
+                          95% customer satisfaction score
+                        </span>
                       </li>
                     </ul>
                   </div>
@@ -328,7 +388,8 @@ const DigitalBankingServices: React.FC = () => {
               Ready to Transform Your Banking Services?
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-              Partner with us to deliver exceptional digital banking experiences that drive customer satisfaction and business growth
+              Partner with us to deliver exceptional digital banking experiences
+              that drive customer satisfaction and business growth
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

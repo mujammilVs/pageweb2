@@ -68,7 +68,7 @@ const PartnersSection: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {partners.map((partner, index) => (
             <motion.div
-              key={partner.name}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
@@ -95,26 +95,26 @@ const PartnersSection: React.FC = () => {
 
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-6">
-            Join over 500+ companies that trust our solutions
+            Join over 100+ companies that trust our solutions
           </p>
           <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-500">
             <div className="flex items-center">
               <span className="font-semibold text-blue-600 text-2xl mr-2">
-                500+
+                110+
               </span>
               <span>Active Clients</span>
             </div>
             <div className="flex items-center">
               <span className="font-semibold text-blue-600 text-2xl mr-2">
-                20+
+                5+
               </span>
-              <span>Countries</span>
+              <span>Regions</span>
             </div>
             <div className="flex items-center">
               <span className="font-semibold text-blue-600 text-2xl mr-2">
-                99%
+                6+
               </span>
-              <span>Uptime</span>
+              <span>Branches</span>
             </div>
             <div className="flex items-center">
               <span className="font-semibold text-blue-600 text-2xl mr-2">

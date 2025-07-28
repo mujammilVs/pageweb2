@@ -1,14 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+
+
 import { 
   FileText, 
   BookOpen, 
-  Users, 
   Star, 
   Calendar,
   ArrowRight
 } from 'lucide-react';
+
+import feature1 from '../../asstes/page-images/arab6.jpg'
+import feature2 from '../../asstes/page-images/arab7.jpg'
+import feature3 from '../../asstes/page-images/arab8.jpg'
 
 const RelatedPages: React.FC = () => {
   const resources = [
@@ -46,21 +51,21 @@ const RelatedPages: React.FC = () => {
     {
       title: 'Digital Banking Transformation Guide',
       description: 'Complete guide to modernizing your banking infrastructure',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400&h=200',
+      image: feature1,
       category: 'Guide',
       readTime: '15 min read'
     },
     {
       title: 'AI in Financial Services',
       description: 'How artificial intelligence is reshaping finance',
-      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400&h=200',
+      image: feature2,
       category: 'Article',
       readTime: '8 min read'
     },
     {
       title: 'Cloud Migration Success Story',
       description: 'How TechBank achieved 99.9% uptime',
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400&h=200',
+      image: feature3,
       category: 'Case Study',
       readTime: '12 min read'
     }
@@ -89,7 +94,7 @@ const RelatedPages: React.FC = () => {
               className="group"
             >
               <Link
-                to={resource.link}
+                to={''}
                 className="block bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 h-full"
               >
                 <div className={`bg-gradient-to-r ${resource.color} w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
@@ -129,7 +134,7 @@ const RelatedPages: React.FC = () => {
                   <img
                     src={content.image}
                     alt={content.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className=" group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
