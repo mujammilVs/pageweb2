@@ -10,10 +10,9 @@ import {
   Eye,
 } from "lucide-react";
 import LocateUs from "../components/LocateUs";
-import ourstory from "../asstes/page-images/arab2.jpg";
+import ourstory from "../asstes/page-images/arab7.jpg";
 import { aboutus1 } from "../components/pageteam/data";
 import AboutHeroSection from "../components/HeroSections/AboutHero";
-import ServiceHeroSection from "../components/HeroSections/ServiceHero";
 
 const About: React.FC = () => {
   const fadeInUp = {

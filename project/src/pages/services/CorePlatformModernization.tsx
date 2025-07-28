@@ -132,23 +132,27 @@ const CorePlatformModernization: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-            >
-              <div className="bg-purple-100 rounded-lg p-3 w-fit mb-4">
-                <service.icon className="h-6 w-6 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-600">
-                {service.description}
-              </p>
-            </motion.div>
+           <motion.div
+                        key={service.title}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="relative group rounded-xl overflow-hidden shadow-md hover:shadow-lg bg-white transition-all duration-300"
+                      >
+                        {/* Background hover animation */}
+                        <div className="absolute top-0 right-0 h-full w-0 bg-gradient-to-r from-purple-500 to-purple-600 opacity-10 group-hover:w-full transition-all duration-500 z-0" />
+          
+                        {/* Content */}
+                        <div className="relative z-10 p-6">
+                          <div className="bg-purple-100 rounded-lg p-3 w-fit mb-4">
+                            <service.icon className="h-6 w-6 text-purple-600" />
+                          </div>
+                          <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                            {service.title}
+                          </h3>
+                          <p className="text-gray-600">{service.description}</p>
+                        </div>
+                      </motion.div>
           ))}
         </div>
       </div>

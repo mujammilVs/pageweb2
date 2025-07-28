@@ -9,6 +9,7 @@ import TeamSection from "../components/Home/TeamSection";
 import LocationSection from "../components/Home/LocationSection";
 import RelatedPages from "../components/Home/RelatedPages";
 import OurPartners from "../components/OurPartners";
+import LocationMap from "../components/Home/LocationMap";
 
 const Home: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const Home: React.FC = () => {
       {/* <TeamMembers /> */}
 
       {/* <RequestConsultant /> */}
+      <LocationMap />
       <LocationSection />
       <RelatedPages />
     </motion.div>

@@ -1,114 +1,156 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Cloud, Shield, Database, Monitor, Zap, Globe, CheckCircle } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Cloud,
+  Shield,
+  Database,
+  Monitor,
+  Zap,
+  Globe,
+  CheckCircle,
+} from "lucide-react";
 
 const BankingCloudServices: React.FC = () => {
   const services = [
     {
       icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Seamless migration of banking applications and data to secure cloud infrastructure'
+      title: "Cloud Migration",
+      description:
+        "Seamless migration of banking applications and data to secure cloud infrastructure",
     },
     {
       icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with full regulatory compliance for financial services'
+      title: "Security & Compliance",
+      description:
+        "Enterprise-grade security with full regulatory compliance for financial services",
     },
     {
       icon: Database,
-      title: 'Data Management',
-      description: 'Secure data storage, backup, and recovery solutions for banking institutions'
+      title: "Data Management",
+      description:
+        "Secure data storage, backup, and recovery solutions for banking institutions",
     },
     {
       icon: Monitor,
-      title: 'Performance Monitoring',
-      description: 'Real-time monitoring and analytics for optimal cloud performance'
+      title: "Performance Monitoring",
+      description:
+        "Real-time monitoring and analytics for optimal cloud performance",
     },
     {
       icon: Zap,
-      title: 'Scalability',
-      description: 'Auto-scaling infrastructure that grows with your business demands'
+      title: "Scalability",
+      description:
+        "Auto-scaling infrastructure that grows with your business demands",
     },
     {
       icon: Globe,
-      title: 'Global Infrastructure',
-      description: 'Worldwide cloud infrastructure with local compliance requirements'
-    }
+      title: "Global Infrastructure",
+      description:
+        "Worldwide cloud infrastructure with local compliance requirements",
+    },
   ];
 
   const cloudFeatures = [
     {
-      category: 'Security',
-      items: ['End-to-end encryption', 'Multi-factor authentication', 'Compliance monitoring', 'Threat detection']
+      category: "Security",
+      items: [
+        "End-to-end encryption",
+        "Multi-factor authentication",
+        "Compliance monitoring",
+        "Threat detection",
+      ],
     },
     {
-      category: 'Performance',
-      items: ['Auto-scaling', 'Load balancing', 'CDN integration', 'Performance optimization']
+      category: "Performance",
+      items: [
+        "Auto-scaling",
+        "Load balancing",
+        "CDN integration",
+        "Performance optimization",
+      ],
     },
     {
-      category: 'Compliance',
-      items: ['SOC 2 Type II', 'ISO 27001', 'PCI DSS', 'GDPR compliance']
+      category: "Compliance",
+      items: ["SOC 2 Type II", "ISO 27001", "PCI DSS", "GDPR compliance"],
     },
     {
-      category: 'Monitoring',
-      items: ['Real-time alerts', 'Performance metrics', 'Audit trails', 'Reporting dashboard']
-    }
+      category: "Monitoring",
+      items: [
+        "Real-time alerts",
+        "Performance metrics",
+        "Audit trails",
+        "Reporting dashboard",
+      ],
+    },
   ];
 
   const benefits = [
-    '99.9% uptime guarantee',
-    '60% reduction in infrastructure costs',
-    'Enhanced security posture',
-    'Improved disaster recovery',
-    'Faster deployment times',
-    'Global scalability and reach'
+    "99.9% uptime guarantee",
+    "60% reduction in infrastructure costs",
+    "Enhanced security posture",
+    "Improved disaster recovery",
+    "Faster deployment times",
+    "Global scalability and reach",
   ];
 
   const cloudProviders = [
     {
-      name: 'AWS',
-      services: ['EC2', 'RDS', 'S3', 'Lambda'],
-      specialization: 'Comprehensive cloud services'
+      name: "AWS",
+      services: ["EC2", "RDS", "S3", "Lambda"],
+      specialization: "Comprehensive cloud services",
     },
     {
-      name: 'Microsoft Azure',
-      services: ['Virtual Machines', 'SQL Database', 'App Service', 'Functions'],
-      specialization: 'Enterprise integration'
+      name: "Microsoft Azure",
+      services: [
+        "Virtual Machines",
+        "SQL Database",
+        "App Service",
+        "Functions",
+      ],
+      specialization: "Enterprise integration",
     },
     {
-      name: 'Google Cloud',
-      services: ['Compute Engine', 'Cloud SQL', 'Cloud Storage', 'Cloud Functions'],
-      specialization: 'AI and ML capabilities'
-    }
+      name: "Google Cloud",
+      services: [
+        "Compute Engine",
+        "Cloud SQL",
+        "Cloud Storage",
+        "Cloud Functions",
+      ],
+      specialization: "AI and ML capabilities",
+    },
   ];
 
   const migrationSteps = [
     {
-      step: '1',
-      title: 'Assessment',
-      description: 'Comprehensive evaluation of current infrastructure and applications'
+      step: "1",
+      title: "Assessment",
+      description:
+        "Comprehensive evaluation of current infrastructure and applications",
     },
     {
-      step: '2',
-      title: 'Planning',
-      description: 'Detailed migration strategy with timeline and risk assessment'
+      step: "2",
+      title: "Planning",
+      description:
+        "Detailed migration strategy with timeline and risk assessment",
     },
     {
-      step: '3',
-      title: 'Migration',
-      description: 'Phased migration approach with minimal business disruption'
+      step: "3",
+      title: "Migration",
+      description: "Phased migration approach with minimal business disruption",
     },
     {
-      step: '4',
-      title: 'Optimization',
-      description: 'Performance tuning and cost optimization post-migration'
+      step: "4",
+      title: "Optimization",
+      description: "Performance tuning and cost optimization post-migration",
     },
     {
-      step: '5',
-      title: 'Management',
-      description: 'Ongoing monitoring, maintenance, and support services'
-    }
+      step: "5",
+      title: "Management",
+      description: "Ongoing monitoring, maintenance, and support services",
+    },
   ];
 
   return (
@@ -126,7 +168,8 @@ const BankingCloudServices: React.FC = () => {
               Banking Cloud Services
             </h1>
             <p className="text-xl md:text-2xl text-cyan-100 max-w-3xl mx-auto mb-8">
-              Secure, scalable cloud infrastructure specifically designed for banking institutions
+              Secure, scalable cloud infrastructure specifically designed for
+              banking institutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -154,7 +197,8 @@ const BankingCloudServices: React.FC = () => {
             Cloud Banking Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Comprehensive cloud services tailored for the banking and financial services industry
+            Comprehensive cloud services tailored for the banking and financial
+            services industry
           </p>
         </div>
 
@@ -165,17 +209,21 @@ const BankingCloudServices: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+              className="relative group rounded-xl overflow-hidden shadow-md hover:shadow-lg bg-white transition-all duration-300"
             >
-              <div className="bg-cyan-100 rounded-lg p-3 w-fit mb-4">
-                <service.icon className="h-6 w-6 text-cyan-600" />
+              {/* Background hover animation */}
+              <div className="absolute top-0 left-0 w-full h-0 bg-gradient-to-b from-cyan-500 to-cyan-600 opacity-10 group-hover:h-full transition-all duration-500 z-0" />
+
+              {/* Content */}
+              <div className="relative z-10 p-6">
+                <div className="bg-cyan-100 rounded-lg p-3 w-fit mb-4">
+                  <service.icon className="h-6 w-6 text-cyan-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600">{service.description}</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-600">
-                {service.description}
-              </p>
             </motion.div>
           ))}
         </div>
@@ -189,7 +237,8 @@ const BankingCloudServices: React.FC = () => {
               Enterprise-Grade Features
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Built specifically for the demanding requirements of banking institutions
+              Built specifically for the demanding requirements of banking
+              institutions
             </p>
           </div>
 
@@ -232,7 +281,9 @@ const BankingCloudServices: React.FC = () => {
                 Why Choose Our Cloud Services?
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Our banking cloud solutions provide the security, compliance, and performance that financial institutions demand, with the flexibility to scale as your business grows.
+                Our banking cloud solutions provide the security, compliance,
+                and performance that financial institutions demand, with the
+                flexibility to scale as your business grows.
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -243,7 +294,7 @@ const BankingCloudServices: React.FC = () => {
                 ))}
               </ul>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -267,7 +318,8 @@ const BankingCloudServices: React.FC = () => {
               Multi-Cloud Expertise
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We work with leading cloud providers to give you the best solutions
+              We work with leading cloud providers to give you the best
+              solutions
             </p>
           </div>
 
@@ -286,9 +338,7 @@ const BankingCloudServices: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {provider.name}
                 </h3>
-                <p className="text-gray-600 mb-4">
-                  {provider.specialization}
-                </p>
+                <p className="text-gray-600 mb-4">{provider.specialization}</p>
                 <div className="flex flex-wrap justify-center gap-2">
                   {provider.services.map((service, serviceIndex) => (
                     <span
@@ -332,9 +382,7 @@ const BankingCloudServices: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 text-sm">
-                  {step.description}
-                </p>
+                <p className="text-gray-600 text-sm">{step.description}</p>
               </motion.div>
             ))}
           </div>
@@ -361,31 +409,45 @@ const BankingCloudServices: React.FC = () => {
                 </h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Challenge:
+                    </h4>
                     <p className="text-gray-600">
-                      Legacy infrastructure limiting scalability and increasing operational costs
+                      Legacy infrastructure limiting scalability and increasing
+                      operational costs
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Solution:
+                    </h4>
                     <p className="text-gray-600">
-                      Complete cloud migration with multi-cloud strategy and enhanced security
+                      Complete cloud migration with multi-cloud strategy and
+                      enhanced security
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Results:
+                    </h4>
                     <ul className="space-y-2">
                       <li className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-cyan-500 mr-2" />
-                        <span className="text-gray-700">50% reduction in infrastructure costs</span>
+                        <span className="text-gray-700">
+                          50% reduction in infrastructure costs
+                        </span>
                       </li>
                       <li className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-cyan-500 mr-2" />
-                        <span className="text-gray-700">99.9% uptime achieved</span>
+                        <span className="text-gray-700">
+                          99.9% uptime achieved
+                        </span>
                       </li>
                       <li className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-cyan-500 mr-2" />
-                        <span className="text-gray-700">Enhanced security posture</span>
+                        <span className="text-gray-700">
+                          Enhanced security posture
+                        </span>
                       </li>
                     </ul>
                   </div>
@@ -411,7 +473,8 @@ const BankingCloudServices: React.FC = () => {
               Ready to Move to the Cloud?
             </h2>
             <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-              Transform your banking infrastructure with secure, scalable cloud solutions
+              Transform your banking infrastructure with secure, scalable cloud
+              solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

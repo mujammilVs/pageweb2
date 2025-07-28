@@ -54,22 +54,22 @@ const FigifloProduct: React.FC = () => {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "Marcus Johnson",
-      role: "Process Manager, AutoFlow Corp",
-      content:
-        "Figiflo transformed our complex approval processes. What used to take weeks now happens in days with full visibility.",
-      rating: 5,
-    },
-    {
-      name: "Lisa Chen",
-      role: "Operations Director, WorkStream Inc",
-      content:
-        "The visual interface makes it easy for non-technical team members to understand and modify workflows.",
-      rating: 5,
-    },
-  ];
+  // const testimonials = [
+  //   {
+  //     name: "Marcus Johnson",
+  //     role: "Process Manager, AutoFlow Corp",
+  //     content:
+  //       "Figiflo transformed our complex approval processes. What used to take weeks now happens in days with full visibility.",
+  //     rating: 5,
+  //   },
+  //   {
+  //     name: "Lisa Chen",
+  //     role: "Operations Director, WorkStream Inc",
+  //     content:
+  //       "The visual interface makes it easy for non-technical team members to understand and modify workflows.",
+  //     rating: 5,
+  //   },
+  // ];
 
   // const pricingPlans = [
   //   {
@@ -291,7 +291,7 @@ const FigifloProduct: React.FC = () => {
       </div>
 
       {/* Testimonials Section */}
-      <div className="bg-gray-50">
+      {/* <div className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -333,7 +333,7 @@ const FigifloProduct: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Pricing Section */}
       {/* <div className="bg-white">
